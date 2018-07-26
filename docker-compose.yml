@@ -1,0 +1,32 @@
+# Documentation: https://docs.docker.com/compose/compose-file
+version: '3'
+services:
+
+  # Template from image
+
+  service_name: # TODO set name
+    container_name: container_name # TODO set name
+    image: author/name # TODO set image # If no tag get last
+    restart: always # TODO could be: "no", always, on-failure, unless-stopped
+    network_mode: "host" # TODO could be: "bridge", "host", "none", ...
+    ports:
+      - "137:137/udp" # TODO set or remove ports # local:container
+      - "80:3000" # TODO if no local port : expose: '42'
+    volumes:
+      - /local/path:/container/path # TODO set or remove volume
+    environment:
+      TZ: Europe/Paris # TODO set or remove environment
+    links:
+      - service_name # TODO set or remove links
+    depends_on:
+      - service_name # TODO set or remove depends on
+    command: bundle exec thin -p 3000 # TODO set or remove commande # Override the default command
+
+  # Template from local Dockerfile
+
+  service_name: # TODO set name
+    container_name: container_name # TODO set name
+    build:
+      context: directory # TODO set the path from ./
+      args:
+        version: "v2.0.9" # TODO set or remove arguments
