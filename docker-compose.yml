@@ -24,8 +24,8 @@ services:
 
   # Template from local Dockerfile
 
-  service_name: # TODO set name
-    container_name: container_name # TODO set name
+  service_name: # TODO set the service name
+    container_name: container_name # TODO set the build name
     build:
       context: directory # TODO set the path from ./
       args:
