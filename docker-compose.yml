@@ -4,8 +4,8 @@ services:
 
   # Template from image
 
-  service_name: # TODO set name
-    container_name: container_name # TODO set name
+  service_name: # TODO set the service name
+    container_name: container_name # TODO set the build name
     image: author/name # TODO set image # If no tag get last
     restart: unless-stopped # TODO could be: "no", always, on-failure
     network_mode: "host" # TODO could be: "bridge", "host", "none", ...
@@ -20,7 +20,7 @@ services:
       - service_name # TODO set or remove links
     depends_on:
       - service_name # TODO set or remove depends on
-    command: bundle exec thin -p 3000 # TODO add options to the commande
+    command: bundle exec thin -p 3000 # TODO add options to the command
 
   # Template from local Dockerfile
 
