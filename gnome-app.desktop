@@ -1,0 +1,13 @@
+[Desktop Entry]
+# Copy this file in: ~/.local/share/applications/<name.desktop>
+# Validate with: desktop-file-validate ~/.local/share/applications/<name.desktop>
+# Refresh with Alt+F2 then command "r"
+Exec=<TODO absolute path to executable (chmod +x)>
+Icon=<TODO absolute icon path (.svg .png .ico)>
+Name=<TODO Name to display in the menu>
+GenericName=<TODO Description of the entry>
+Type=Application
+Terminal=false
+StartupNotify=false
+# See https://specifications.freedesktop.org/menu-spec/latest/apa.html
+Categories=<TODO one or more from the list: AudioVideo;Audio;Video;Development;Education;Game;Graphics;Network;Office;Science;Settings;System;Utility>
